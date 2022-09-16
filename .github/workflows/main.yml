@@ -15,12 +15,10 @@ jobs:
       - name: Generate test report
         run: |
           npx mochawesome-merge cypress/reports/*.json > cypress/reports/mochawesome.json
-          npx marge -o public cypress/reports/mochawesome.json
-      
-      - name: Deploy report page
-        uses: peaceiris/actions-gh-pages@v3
+          npx marge -o cypress/reports/results cypress/reports/mochawesome.json
+
+      - name: Archive test results
+        uses: actions/upload-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          name: mochawesome-report
+          path: cypress/reports/results
