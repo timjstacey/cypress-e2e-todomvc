@@ -8,6 +8,8 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
   },
+  numTestsKeptInMemory: 5,
+  video: false,
   e2e: {
     baseUrl: 'https://demo.playwright.dev/todomvc/#/',
     // eslint-disable-next-line no-unused-vars
