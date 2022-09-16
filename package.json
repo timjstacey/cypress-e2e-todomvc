@@ -5,7 +5,8 @@
   "main": "cypress.config.js",
   "dependencies": {
     "@faker-js/faker": "^7.5.0",
-    "cypress": "^10.8.0"
+    "cypress": "^10.8.0",
+    "cypress-mochawesome-reporter": "^3.2.2"
   },
   "devDependencies": {
     "eslint": "^8.23.1",

@@ -7,7 +7,7 @@ const buttonDelete = 'button.destroy';
 const textTodoCount = 'footer .todo-count';
 const listFilters = '.filters li';
 
-const generateActiveTodos = (todoCount = {}) => {
+const generateActiveTodos = (todoCount = 1) => {
   const todos = [];
   for (let i = 0; i < todoCount; i += 1) {
     todos.push({
@@ -27,7 +27,7 @@ describe('todo mvc', () => {
     });
 
     it('can add a todo', () => {
-      const todos = generateActiveTodos(1);
+      const todos = generateActiveTodos();
       cy.get(inputNewTodo)
         .type(`${todos[0].title}{enter}`);
 
