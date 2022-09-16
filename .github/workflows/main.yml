@@ -15,7 +15,7 @@ jobs:
       - name: Generate test report
         run: |
           npx mochawesome-merge cypress/reports/*.json > cypress/reports/mochawesome.json
-          npx marge -o public cypress/reports/mochawesome.json
+          npx marge -o cypress/reports/results cypress/reports/mochawesome.json
 
       - name: Archive test results
         uses: actions/upload-artifact@v3
