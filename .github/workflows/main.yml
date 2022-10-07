@@ -16,12 +16,12 @@ jobs:
           runTests: false
           build: npm install
 
-      - name: Save build folder
-        uses: actions/upload-artifact@v2
-        with:
-          name: build
-          if-no-files-found: error
-          path: build
+      # - name: Save build folder
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: build
+      #     if-no-files-found: error
+      #     path: build
 
   ui-chrome-tests:
     runs-on: ubuntu-latest
