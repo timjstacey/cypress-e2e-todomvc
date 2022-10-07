@@ -2,6 +2,7 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+  projectId: 'pnzyx2',
   numTestsKeptInMemory: 5,
   video: false,
   reporter: 'mochawesome',
