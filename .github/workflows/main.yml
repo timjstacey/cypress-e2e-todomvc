@@ -25,7 +25,7 @@ jobs:
         uses: cypress-io/github-action@v4.2.0
         with:
           install: false
-          start: npm run cy:run --- --record --key CYPRESS_RECORD_KEY
+          start: npm run cy:run --- --record --key $CYPRESS_RECORD_KEY
           browser: chrome
           record: true
           parallel: true
